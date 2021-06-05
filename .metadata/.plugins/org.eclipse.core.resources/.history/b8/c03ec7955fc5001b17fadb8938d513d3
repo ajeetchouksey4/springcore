@@ -1,0 +1,55 @@
+package com.springcore;
+
+import java.util.List;
+import java.util.Map;
+
+public class Student {
+	private int studentId;
+	private String studentName;
+	private String studentAddress;
+	private List<String> courseAssigned;
+	private Map<Integer, String> map;
+	public int getStudentId() {
+		return studentId;
+	}
+	public void setStudentId(int studentId) {
+		this.studentId = studentId;
+	}
+	public String getStudentName() {
+		return studentName;
+	}
+	public void setStudentName(String studentName) {
+		this.studentName = studentName;
+	}
+	public String getStudentAddress() {
+		return studentAddress;
+	}
+	public void setStudentAddress(String studentAddress) {
+		this.studentAddress = studentAddress;
+	}
+	public List<String> getCourseAssigned() {
+		return courseAssigned;
+	}
+	public void setCourseAssigned(List<String> courseAssigned) {
+		this.courseAssigned = courseAssigned;
+	}
+	public Map<Integer, String> getMap() {
+		return map;
+	}
+	public void setMap(Map<Integer, String> map) {
+		this.map = map;
+	}
+	
+	
+	
+	@Override
+	public String toString() {
+		return "Student [studentId=" + studentId + ", studentName=" + studentName + ", studentAddress=" + studentAddress
+				+ ", courseAssigned=" + courseAssigned + ", map=" + map + "]";
+	}
+	
+	
+	
+	
+	
+}

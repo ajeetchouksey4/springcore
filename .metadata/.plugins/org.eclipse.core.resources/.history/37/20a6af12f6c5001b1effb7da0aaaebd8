@@ -1,0 +1,36 @@
+package com.springcore;
+
+public class Test {
+	private int id;
+	private String Name;
+
+	public Test(int id, String name) {
+		super();
+		
+		System.out.println("Para 1st Constructror");
+		this.id = id;
+		Name = name;
+	}
+	
+	public Test(double id, String name) {
+		super();
+		
+		System.out.println("Para 2nd Constructror");
+//		this.id = id;
+//		Name = name;
+	}
+	
+
+	public Test() {
+		super();
+		System.out.println("Blank COnstructor");
+		// TODO Auto-generated constructor stub
+	}
+
+
+	@Override
+	public String toString() {
+		return "Test [id=" + id + ", Name=" + Name + "]";
+	}
+
+}

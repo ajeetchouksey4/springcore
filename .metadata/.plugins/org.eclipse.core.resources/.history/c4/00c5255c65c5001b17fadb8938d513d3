@@ -1,0 +1,12 @@
+package com.springcore;
+
+import java.util.List;
+import java.util.Map;
+
+public class Student {
+private String name;
+private int id;
+private List<String> address;
+private Map<Integer,String> courses;
+
+}

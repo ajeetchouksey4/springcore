@@ -1,0 +1,6 @@
+package com.springcore;
+
+public class ABC {
+	private int a;
+	private int b;
+}

@@ -1,0 +1,18 @@
+package com.springcore;
+
+public class Test {
+	private int id;
+	private String Name;
+
+	public Test(int id, String name) {
+		super();
+		this.id = id;
+		Name = name;
+	}
+
+	@Override
+	public String toString() {
+		return "Test [id=" + id + ", Name=" + Name + "]";
+	}
+
+}

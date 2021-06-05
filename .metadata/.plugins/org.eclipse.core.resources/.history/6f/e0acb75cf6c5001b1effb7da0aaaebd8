@@ -1,0 +1,16 @@
+package com.springcore;
+
+import java.util.List;
+import java.util.Set;
+
+public class Employee {
+	private int empId;
+	private String empName;
+	private String address;
+	private List<String> address;
+	private Set<Integer> phoneNo;
+
+	
+	
+	
+}

@@ -1,0 +1,74 @@
+package com.springcore;
+
+import java.util.List;
+import java.util.Map;
+import java.util.Set;
+
+public class Student {
+	private String name;
+	private int id;
+	private Set<Integer> phoneNumber;
+	private List<String> address;
+	private Map<Integer, String> courses;
+
+	public String getName() {
+		return name;
+	}
+
+	public void setName(String name) {
+		this.name = name;
+	}
+
+	public int getId() {
+		return id;
+	}
+
+	public void setId(int id) {
+		this.id = id;
+	}
+
+	public Set<Integer> getPhoneNumber() {
+		return phoneNumber;
+	}
+
+	public void setPhoneNumber(Set<Integer> phoneNumber) {
+		this.phoneNumber = phoneNumber;
+	}
+
+	public List<String> getAddress() {
+		return address;
+	}
+
+	public void setAddress(List<String> address) {
+		this.address = address;
+	}
+
+	public Map<Integer, String> getCourses() {
+		return courses;
+	}
+
+	public void setCourses(Map<Integer, String> courses) {
+		this.courses = courses;
+	}
+
+	public Student() {
+		super();
+		// TODO Auto-generated constructor stub
+	}
+
+	public Student(String name, int id, Set<Integer> phoneNumber, List<String> address, Map<Integer, String> courses) {
+		super();
+		this.name = name;
+		this.id = id;
+		this.phoneNumber = phoneNumber;
+		this.address = address;
+		this.courses = courses;
+	}
+
+	@Override
+	public String toString() {
+		return "Student [name=" + name + ", id=" + id + ", phoneNumber=" + phoneNumber + ", address=" + address
+				+ ", courses=" + courses + "]";
+	}
+
+}

@@ -1,0 +1,21 @@
+package com.springcore;
+
+import org.springframework.context.support.AbstractApplicationContext;
+import org.springframework.context.support.ClassPathXmlApplicationContext;
+
+public class App {
+	public static void main(String[] args) {
+		AbstractApplicationContext context = new ClassPathXmlApplicationContext("com/springcore/app-context.xml");
+
+		Employee emp = context.getBean(Employee.class);
+
+		System.out.println(emp);
+
+		System.out.println("+++++++++++++++++++++++++++++++");
+
+		System.out.println(emp);
+
+		context.registerShutdownHook();
+
+	}
+}
