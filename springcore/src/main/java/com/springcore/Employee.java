@@ -1,81 +1,76 @@
 package com.springcore;
 
-import java.util.List;
-import java.util.Set;
+import java.util.Map;
 
 import org.springframework.beans.factory.DisposableBean;
 import org.springframework.beans.factory.InitializingBean;
 
 public class Employee implements InitializingBean, DisposableBean {
-	private int empId;
-	private String empName;
-	private List<String> address;
-	private Set<Integer> phoneNo;
+	private int id;
+	private String name;
+	private Map<String, String> data;
+	private PersonalData personalData;
 
-	public int getEmpId() {
-		return empId;
+	public int getId() {
+		return id;
 	}
 
-	public void setEmpId(int empId) {
-		this.empId = empId;
+	public void setId(int id) {
+		this.id = id;
 	}
 
-	public String getEmpName() {
-		return empName;
+	public String getName() {
+		return name;
 	}
 
-	public void setEmpName(String empName) {
-		this.empName = empName;
+	public void setName(String name) {
+		this.name = name;
 	}
 
-	public List<String> getAddress() {
-		return address;
+	public Map<String, String> getData() {
+		return data;
 	}
 
-	public void setAddress(List<String> address) {
-		this.address = address;
+	public void setData(Map<String, String> data) {
+		this.data = data;
 	}
 
-	public Set<Integer> getPhoneNo() {
-		return phoneNo;
+	public PersonalData getPersonalData() {
+		return personalData;
 	}
 
-	public void setPhoneNo(Set<Integer> phoneNo) {
-		System.out.println("Setting properties");
-		this.phoneNo = phoneNo;
+	public void setPersonalData(PersonalData personalData) {
+		this.personalData = personalData;
 	}
 
-	public Employee(int empId, String empName, List<String> address, Set<Integer> phoneNo) {
+	public Employee(int id, String name, Map<String, String> data, PersonalData personalData) {
 		super();
-		System.out.println("calling Employee(Argument constructor)-- ");
-		this.empId = empId;
-		this.empName = empName;
-		this.address = address;
-		this.phoneNo = phoneNo;
+		this.id = id;
+		this.name = name;
+		this.data = data;
+		this.personalData = personalData;
 	}
 
 	public Employee() {
 		super();
-		System.out.println("calling Employee() -- ");
 		// TODO Auto-generated constructor stub
 	}
 
 	@Override
 	public String toString() {
-		return "Employee [empId=" + empId + ", empName=" + empName + ", address=" + address + ", phoneNo=" + phoneNo
-				+ "]";
+		return "Employee [id=" + id + ", name=" + name + ", data=" + data + ", personalData=" + personalData + "]";
 	}
 
-	@Override
-	public void destroy() throws Exception {
-		System.out.println("After Destory ----- kHATAM");
+	
 
+	@Override
+	public void destroy() {
+		System.out.println("destroy method called - Employee.java");
 	}
 
 	@Override
 	public void afterPropertiesSet() throws Exception {
-		System.out.println("After Property set");
-
+		System.out.println("INIT method called - Employee.java");
+		
 	}
-
 }

@@ -1,50 +1,56 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <beans xmlns="http://www.springframework.org/schema/beans"
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:context="http://www.springframework.org/schema/context"
 	xmlns:p="http://www.springframework.org/schema/p"
-	xsi:schemaLocation="http://www.springframework.org/schema/beans  
-               http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
+	xmlns:util="http://www.springframework.org/schema/util"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+			http://www.springframework.org/schema/beans/spring-beans.xsd
+			http://www.springframework.org/schema/context  
+      		http://www.springframework.org/schema/context/spring-context.xsd
+      		http://www.springframework.org/schema/util  
+      		http://www.springframework.org/schema/util/spring-util.xsd">
 
-	<bean name="abcName" class="com.springcore.ABC" p:a="121"
-		p:b="111">
 
-	</bean>
 
-	<bean name="student" class="com.springcore.Student" p:name="Ajeet"
-		p:id="101">
+	<context:annotation-config />
 
-		<property name="phoneNumber">
-			<set>
-				<value>121</value>
-				<value>111</value>
-				<value>12351</value>
-				<value>3546121</value>
-				<value>78121</value>
-			</set>
-		</property>
+	<util:list id="myList" list-class="java.util.LinkedList">
+		<value>SBI</value>
+		<value>PNB</value>
+		<value>HDFC</value>
+		<value>IDFC</value>
+	</util:list>
 
-		<property name="address">
-			<list>
-				<value>111</value>
-				<value>22222</value>
-				<value>4444</value>
-				<value>44444</value>
-				<value>4444</value>
-			</list>
-		</property>
+	<util:map id="myMap">
+		<entry key="101" value="ABC"></entry>
+		<entry key="102" value="XYZ"></entry>
+		<entry key="103" value="PQR"></entry>
+		<entry key="104" value="ABC-XYZ-PQR"></entry>
 
-		<property name="courses">
-			<map>
-				<entry key="101" value="Ajeet"></entry>
-			</map>
-		</property>
+	</util:map>
 
-		<property name="abc">
-			<ref bean="abcName" />
-		</property>
+	<bean name="emp1" class="com.springcore.Employee" p:id="102"
+		p:name="Amit Chouksey">
+		<property name="data" ref="myMap"/>
+		<!-- <property name="personalData"> <ref bean="personalData" /> </property> -->
 
 	</bean>
 
+	
+
+	<bean name="personalData1" class="com.springcore.PersonalData"
+		p:dob="12/08/1985" p:cardNumber="1234131445" p:bankName="SBI"
+		p:bankBalance="874885965">
+	</bean>
+
+	<bean name="personalData2" class="com.springcore.PersonalData"
+		p:dob="12/08/1985" p:cardNumber="6446464" p:bankName="RBI"
+		p:bankBalance="466556">
+	</bean>
+
+
+	<bean name="employer" class="com.springcore.Employer" />
 
 
 
