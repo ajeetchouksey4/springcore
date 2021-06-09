@@ -22,7 +22,7 @@
 		<value>IDFC</value>
 	</util:list>
 
-	<util:map id="myMap">
+	<util:map id="myMap" map-class="java.util.LinkedHashMap">
 		<entry key="101" value="ABC"></entry>
 		<entry key="102" value="XYZ"></entry>
 		<entry key="103" value="PQR"></entry>

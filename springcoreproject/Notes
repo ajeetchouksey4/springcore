@@ -1,0 +1,17 @@
+Notes:
+------
+1) Life Cycle ofSpring Bean
+	-- Spring Context Startup
+	-- Bean Instantiated
+	-- Dependancy Injection Bean Inhjecttion via Setter injection or via constrcutor injectton
+	-- custom Init() method called
+	-- custom utility metho
+	-- destroy method
+	
+	
+	This we can achieve by 3 ways
+		1) setter/getter injection
+			-- init-method 
+			-- destroy
+		2) implements Disposable Beans and InitializingBean
+		3) via Annotation
